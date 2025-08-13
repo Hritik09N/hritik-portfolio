@@ -3,350 +3,88 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hritik Nautiyal — Ecologist</title>
-  <meta name="description" content="Hritik Nautiyal — Ecologist. Exploring biodiversity, communities, and the Mighty Mountains. Portfolio, projects, publications and contact." />
-  <style>
-    /* ========== Base ========== */
-    :root{
-      --bg:#fbfbfb;
-      --card:#ffffff;
-      --muted:#6b6b6b;
-      --accent:#2c6b4f;
-      --accent-2:#3a8fb1;
-      --glass: rgba(255,255,255,0.7);
-      --maxw:1100px;
-      --radius:12px;
-      --fw-regular:400;
-      --fw-strong:600;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color: #111;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:linear-gradient(180deg, #f7fbf8 0%, #fbfbfb 100%);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.55;
-      padding:28px 20px;
-      display:flex;
-      justify-content:center;
-      font-size:16px;
-    }
-    .wrap{
-      max-width:var(--maxw);
-      width:100%;
-    }
-
-    /* ========== Header ========== */
-    header{
-      display:flex;
-      gap:18px;
-      align-items:center;
-      justify-content:space-between;
-      margin-bottom:20px;
-    }
-    .brand{
-      display:flex;
-      gap:14px;
-      align-items:center;
-    }
-    .logo{
-      width:56px;height:56px;border-radius:10px;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      display:grid;place-items:center;color:#fff;font-weight:700;
-      box-shadow:0 6px 18px rgba(45,79,63,0.12);
-      font-family:Georgia,serif;
-    }
-    .title{
-      line-height:1;
-    }
-    .title h1{margin:0;font-size:18px;font-weight:700}
-    .title p{margin:0;color:var(--muted);font-size:13px}
-
-    nav{
-      display:flex;
-      gap:12px;
-      align-items:center;
-    }
-    .btn {
-      padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(0,0,0,0.06);
-      font-weight:600;color:var(--accent);
-      text-decoration:none;font-size:13px;
-    }
-    .btn-primary{
-      background:var(--accent);
-      color:#fff;border:0;
-      box-shadow:0 6px 18px rgba(44,107,79,0.12);
-    }
-
-    /* Hamburger for mobile */
-    .hamb {
-      display:none;
-      width:42px;height:42px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);
-      background:var(--card);align-items:center;justify-content:center;
-    }
-
-    /* ========== Hero ========== */
-    .hero{
-      display:grid;
-      grid-template-columns:1fr 360px;
-      gap:22px;
-      align-items:start;
-      margin-bottom:22px;
-    }
-
-    .card {
-      background:var(--card);
-      border-radius:var(--radius);
-      padding:20px;
-      box-shadow:0 10px 30px rgba(18,30,25,0.03);
-      border:1px solid rgba(10,10,10,0.02);
-    }
-
-    .headline{font-size:22px;font-weight:700;margin:0 0 8px}
-    .lead{color:var(--muted);margin:0 0 16px}
-    .hero-cta{display:flex;gap:10px;flex-wrap:wrap}
-    .small {
-      font-size:13px;color:var(--muted);
-      display:flex;gap:8px;align-items:center;margin-top:12px;
-    }
-
-    /* Right column quick card */
-    .contact-card h3{margin:0 0 8px}
-    .contact-item{display:flex;gap:8px;align-items:center;color:var(--muted);font-weight:600}
-    .pill{display:inline-block;padding:8px 10px;border-radius:999px;background:rgba(58,143,177,0.09);color:var(--accent-2);font-weight:700;font-size:13px}
-
-    /* ========== Two-column section ========== */
-    .two-col{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-bottom:22px}
-    .section-title{font-size:18px;margin:0 0 14px;font-weight:700}
-    .meta{color:var(--muted);font-size:14px;margin-bottom:12px}
-
-    /* Projects list */
-    .projects .proj{margin-bottom:16px;padding:14px;border-radius:10px;border:1px solid rgba(10,10,10,0.02);background:linear-gradient(180deg,#fff,#fbfdff)}
-    .proj h4{margin:0 0 6px;font-size:16px}
-    .meta-line{color:var(--muted);font-size:13px;margin-bottom:8px}
-    .tools{font-size:13px;color:var(--muted)}
-
-    /* Skills grid */
-    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .skill-card{padding:12px;border-radius:8px;background:linear-gradient(180deg,#fff,#fbfbff);border:1px solid rgba(0,0,0,0.03)}
-    .skill-card h5{margin:0 0 8px;font-size:14px}
-
-    /* Achievements & Publications boxes */
-    .two-box{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .box{padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff,#fffefc);border:1px solid rgba(0,0,0,0.03)}
-
-    /* Connect section */
-    .connect{
-      margin-top:22px;padding:18px;border-radius:14px;background:linear-gradient(180deg,#e9f7f0,#f9fffb);
-      display:flex;justify-content:space-between;align-items:center;gap:18px;border:1px solid rgba(44,107,79,0.08);
-    }
-    .connect .big{font-size:18px;font-weight:700;color:#0d4b37}
-    .connect .big small{display:block;font-size:13px;color:var(--muted);font-weight:600}
-    .contact-cta{display:flex;gap:12px;align-items:center}
-
-    footer{margin-top:30px;text-align:center;color:var(--muted);font-size:13px;padding:10px}
-
-    /* Responsive */
-    @media (max-width:980px){
-      .hero, .two-col {grid-template-columns:1fr}
-      nav{display:none}
-      .hamb{display:flex}
-      .two-box{grid-template-columns:1fr}
-      .skills-grid{grid-template-columns:1fr}
-    }
-  </style>
+  <title>Hritik Nautiyal — Exploring Biodiversity & Mountains</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap" role="main">
-    <header>
-      <div class="brand">
-        <div class="logo" aria-hidden="true">HN</div>
-        <div class="title">
-          <h1>Hritik Nautiyal</h1>
-          <p>Ecologist • Researcher • Conservation Storyteller</p>
+
+  <!-- HERO / PARALLAX -->
+  <header class="hero" id="home" style="background-image: url('images/hero.jpg')">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Exploring Biodiversity, Communities, and the Mountains</h1>
+      <p class="hero-sub">Field ecology • Human–wildlife coexistence • Spatial ecology</p>
+      <a class="btn" href="#about">Learn more</a>
+      <div class="scroll-down" data-target="#about">↓</div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container fade-in">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>I am an ecologist from Mussoorie with experience in field ecology, human–wildlife conflict mitigation, geospatial analysis, and community-based conservation. I have contributed to projects across the Himalaya and transboundary landscapes and enjoy working at the interface of science and society.</p>
+          <p>Key skills: SECR & distance sampling in RStudio, QGIS, Google Earth Engine, camera trapping, transect surveys, stakeholder engagement, technical reporting.</p>
+        </div>
+        <div class="about-photo">
+          <!-- Replace with your profile image -->
+          <img src="images/profile.jpg" alt="Hritik Nautiyal">
         </div>
       </div>
+    </div>
+  </section>
 
-      <nav aria-label="Primary navigation">
-        <a class="btn" href="#projects">Projects</a>
-        <a class="btn" href="#skills">Skills</a>
-        <a class="btn" href="#pubs">Publications</a>
-        <a class="btn btn-primary" href="#connect">Connect</a>
-      </nav>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">Projects</h2>
 
-      <button class="hamb" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')">
-        ☰
-      </button>
-    </header>
+      <div class="projects-grid">
+        <article class="proj-card fade-in">
+          <img src="images/project1.jpg" alt="Project 1">
+          <div class="proj-info">
+            <h3>Transboundary Tiger Recovery (India–Nepal)</h3>
+            <p>Camera trapping, SECR modelling, landscape planning and community engagement in the Nandhaur landscape.</p>
+          </div>
+        </article>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="card">
-        <p class="headline">Exploring Biodiversity, Communities, and the Mountains</p>
-        <p class="lead">I’m <strong>Hritik Nautiyal</strong>, an ecologist from Mussoorie focused on conserving biodiversity and fostering sustainable coexistence between people and wildlife. My work blends field research, community engagement, and geospatial science to create nature-positive solutions across mountain and transboundary landscapes.</p>
+        <article class="proj-card fade-in">
+          <img src="images/project2.jpg" alt="Project 2">
+          <div class="proj-info">
+            <h3>HWC Mitigation — Rajaji & Haridwar</h3>
+            <p>Livelihood interventions and stakeholder capacity building to reduce forest dependency and conflict.</p>
+          </div>
+        </article>
 
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#projects">Explore My Work</a>
-          <a class="btn" href="#" onclick="alert('Replace with link to your CV file')">Download CV</a>
-          <a class="btn" href="#connect">Get in Touch</a>
-        </div>
-
-        <div class="small" style="margin-top:18px">
-          <span style="display:inline-block;padding:6px 8px;border-radius:8px;background:#f2f9f6;color:#0c593f;font-weight:700">UGC-NET (x3)</span>
-          <span style="margin-left:8px;color:var(--muted)">GATE (Ecology & Evolution)</span>
-        </div>
-      </div>
-
-      <aside class="card contact-card" aria-labelledby="contactCard">
-        <h3 id="contactCard">Quick Profile</h3>
-        <div style="margin-bottom:10px" class="meta">Ecologist — Spatial ecology, HWC mitigation, mountain ecosystems</div>
-        <div class="contact-item"><strong>Location:</strong>&nbsp;Mussoorie (willing to travel/fieldwork)</div>
-        <div style="height:10px"></div>
-        <div class="pill">Open to research, collaborations & consulting</div>
-
-        <hr style="border:none;border-top:1px solid rgba(0,0,0,0.04);margin:14px 0">
-
-        <div class="contact-item" style="margin-top:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M2 7v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7" stroke="#6b6b6b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>&nbsp;<span style="color:var(--muted)">hritiknautiyal14@gmail.com</span></div>
-        <div style="height:8px"></div>
-        <div class="contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V21a1 1 0 0 1-1.09 1 19 19 0 0 1-8.48-3.11 19 19 0 0 1-6-6A19 19 0 0 1 2 3.09 1 1 0 0 1 3 2h4.09a1 1 0 0 1 1 .75c.12.83.34 1.64.64 2.4a1 1 0 0 1-.24 1L7.7 8.7a15 15 0 0 0 6 6l1.55-1.55a1 1 0 0 1 1-.24c.76.3 1.57.52 2.4.64a1 1 0 0 1 .75 1V21z" stroke="#6b6b6b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>&nbsp;<span style="color:var(--muted)">+91 7895591245</span></div>
-      </aside>
-    </section>
-
-    <!-- TWO-COL: Projects & Right Column -->
-    <section class="two-col" id="projects">
-      <div class="card projects" aria-labelledby="projectsTitle">
-        <h2 class="section-title" id="projectsTitle">Projects</h2>
-
-        <div class="proj">
-          <h4>Effect of Climate Change on Mammals — Gangotri National Park</h4>
-          <div class="meta-line"><strong>Organisation:</strong> Wildlife Institute of India (National Mission for Sustaining Himalayan Ecosystem)</div>
-          <p>Conducted a field study in Gangotri National Park to assess climate impacts on mammals. Collected presence and behaviour data, installed data loggers, and analysed occupancy patterns to inform climate resilience strategies.</p>
-          <div class="tools"><strong>Skills/Tools:</strong> field surveys, camera trapping, data logger installation, occupancy modelling</div>
-        </div>
-
-        <div class="proj">
-          <h4>Human–Wildlife Conflict Mitigation — Rajaji & Haridwar Landscape</h4>
-          <div class="meta-line"><strong>Organisation:</strong> GIZ India — Indo-German Cooperation</div>
-          <p>Mitigated HWC through stakeholder engagement, livelihood interventions, and capacity building. Conducted desk research and toolkit development; coordinated trainings and events; managed project databases; and facilitated trainings with ICAR-NAARM and Uttarakhand Forest Department on diversified agriculture and alternative crops.</p>
-          <div class="tools"><strong>Skills/Tools:</strong> participatory rural appraisal, community engagement, training facilitation, event coordination</div>
-        </div>
-
-        <div class="proj">
-          <h4>Supporting Transboundary Tiger Recovery — India & Nepal</h4>
-          <div class="meta-line"><strong>Organisation:</strong> Wildlife Institute of India & Zoological Society of London</div>
-          <p>Contributed to ecological monitoring (camera trapping, SECR modelling in RStudio) and spatial analysis (QGIS, ArcGIS, Google Earth Engine), and led community engagement for livelihood diversification and HWC mitigation in the Nandhaur landscape.</p>
-          <div class="tools"><strong>Skills/Tools:</strong> SECR, distance sampling, QGIS, ArcGIS, Google Earth Engine, stakeholder coordination</div>
-        </div>
-
-        <div class="proj">
-          <h4>Biodiversity Net Gain AI Habitat Mapping — UK Landscapes</h4>
-          <div class="meta-line"><strong>Organisation:</strong> AiDash — BNGAI</div>
-          <p>Conduct habitat surveys and ecological assessments for biodiversity net gain planning. Assess habitat distinctiveness, species richness and seasonal variations to inform pre- and post-development biodiversity strategies.</p>
-          <div class="tools"><strong>Skills/Tools:</strong> remote sensing, habitat classification, geospatial analysis, BNGAI™</div>
-        </div>
-
-        <div class="proj">
-          <h4>Bird Diversity Assessment — Rispana River, Dehradun</h4>
-          <div class="meta-line"><strong>Organisation:</strong> Doon University</div>
-          <p>Master’s dissertation documenting avifaunal diversity along the Rispana catchment through systematic surveys and diversity analyses.</p>
-          <div class="tools"><strong>Skills/Tools:</strong> point counts, species ID, statistical analysis</div>
-        </div>
+        <article class="proj-card fade-in">
+          <img src="images/project3.jpg" alt="Project 3">
+          <div class="proj-info">
+            <h3>High-Altitude Mammal Study — Gangotri</h3>
+            <p>Field surveys and climate impact assessment on Himalayan mammal communities.</p>
+          </div>
+        </article>
 
       </div>
+    </div>
+  </section>
 
-      <aside class="card" aria-labelledby="skillsTitle" id="skills">
-        <h2 class="section-title" id="skillsTitle">Skills & Expertise</h2>
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container fade-in">
+      <h2>Connect</h2>
+      <p>Email: <a href="mailto:hritiknautiyal14@gmail.com">hritiknautiyal14@gmail.com</a> — Phone: +91 7895591245</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/hritik-nautiyal">linkedin.com/in/hritik-nautiyal</a></p>
+    </div>
+  </section>
 
-        <div class="skills-grid" role="list">
-          <div class="skill-card" role="listitem">
-            <h5>Geospatial Analysis</h5>
-            <div class="meta">QGIS • Leafmap • Google Earth Engine — habitat mapping, landscape planning</div>
-          </div>
-          <div class="skill-card" role="listitem">
-            <h5>Statistical Modelling</h5>
-            <div class="meta">RStudio — SECR, distance sampling, occupancy models</div>
-          </div>
-          <div class="skill-card" role="listitem">
-            <h5>Remote Sensing</h5>
-            <div class="meta">Satellite imagery interpretation, habitat classification</div>
-          </div>
-          <div class="skill-card" role="listitem">
-            <h5>Field Monitoring</h5>
-            <div class="meta">Camera trapping, transect surveys, prey density estimation</div>
-          </div>
-          <div class="skill-card" role="listitem">
-            <h5>Community Engagement</h5>
-            <div class="meta">PRA, livelihood planning, trainings & workshops</div>
-          </div>
-          <div class="skill-card" role="listitem">
-            <h5>Communication</h5>
-            <div class="meta">Technical reports, scientific writing, stakeholder liaison</div>
-          </div>
-        </div>
-      </aside>
-    </section>
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> Hritik Nautiyal — Mussoorie</small>
+    </div>
+  </footer>
 
-    <!-- Achievements & Publications -->
-    <section style="margin-bottom:18px">
-      <div class="two-box">
-        <div class="box" id="achieve">
-          <h3 class="section-title">Academic Achievements</h3>
-          <ul style="padding-left:18px;margin:6px 0;color:var(--muted)">
-            <li><strong>UGC-NET (Environmental Sciences)</strong> — qualified three times</li>
-            <li><strong>GATE (Ecology & Evolution)</strong> — qualified</li>
-            <li><strong>M.Sc. Environmental Science</strong> — avifauna & applied ecology</li>
-            <li><strong>B.Sc. (PCM)</strong> — quantitative foundation</li>
-          </ul>
-        </div>
-
-        <div class="box" id="pubs">
-          <h3 class="section-title">Publications & Reports</h3>
-          <p style="margin:6px 0;color:var(--muted)"><strong>Avian diversity of Rispana River, Dehradun, Uttarakhand (India)</strong> — International Journal of Innovative Science and Research Technology, 2021.</p>
-          <p style="margin:6px 0;color:var(--muted)"><strong>Supporting Transboundary Tiger Recovery in India and Nepal (Phase-III)</strong> — Final/technical report (WII–UKFD–ZSL collaboration; co-authored contributions).</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Connect -->
-    <section id="connect">
-      <div class="connect card" role="contentinfo" aria-labelledby="connectTitle">
-        <div>
-          <div class="big" id="connectTitle">Connect With Me</div>
-          <small style="color:var(--muted)">I’m open to collaborations, research partnerships, and consultancies in biodiversity mapping, human–wildlife conflict, mountain ecology, and capacity building.</small>
-        </div>
-
-        <div class="contact-cta">
-          <a class="btn" href="mailto:hritiknautiyal14@gmail.com">✉️ hritiknautiyal14@gmail.com</a>
-          <a class="btn" href="tel:+917895591245">📞 +91 7895591245</a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="year"></span> Hritik Nautiyal — Mussoorie • Designed for fieldwork, research & collaboration
-    </footer>
-  </div>
-
-  <script>
-    // set year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // simple mobile menu fallback (optional)
-    (function(){
-      var nav = document.querySelector('nav');
-      var hamb = document.querySelector('.hamb');
-      if(!hamb) return;
-      hamb.addEventListener('click', function(){
-        if(nav.style.display === 'flex') nav.style.display = 'none';
-        else nav.style.display = 'flex';
-      });
-    })();
-  </script>
-  <!-- Netlify CMS -->
-<script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
